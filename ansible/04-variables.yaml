@@ -6,5 +6,8 @@
     TRAINER: "Ram"
     DURATION: "4 MONTHS"
   tasks:
-  - debug:
-      msg: "Hi I am learning {{COURSE}},trainer is {{TRAINER}},duration is {{DURATION}}"
+  - name: print information
+    vars:
+      COURSE: "DEVOPS with AIOps"
+    debug:
+        msg: "Hi I am learning {{COURSE}},trainer is {{TRAINER}},duration is {{DURATION}}"
