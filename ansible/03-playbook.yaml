@@ -3,7 +3,7 @@
   become: yes # become means rootserver like -b in commandline
   tasks: 
   - name: install nginx
-    ansible.builin.package:
+    ansible.builtin.package:
       name: nginx
       state: present
   - name: start nginx
