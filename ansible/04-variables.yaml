@@ -7,4 +7,4 @@
     DURATION: "4 MONTHS"
   tasks:
   - debug:
-      msg: "Hi I am learning{{COURSE}},trainer is {{TRAINER}},duration is {{DURATION}}"
+      msg: "Hi I am learning {{COURSE}},trainer is {{TRAINER}},duration is {{DURATION}}"
