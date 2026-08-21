@@ -1,0 +1,13 @@
+- name: Install nginx
+  hosts: frontend
+  become: yes # become means rootserver like -b in commandline
+  tasks: 
+  - name: install nginx
+    ansible.builin.package:
+      name: nginx
+      state: present
+  - name: start nginx
+    service:
+      name: nginx
+      state: started
+      enabled: yes
