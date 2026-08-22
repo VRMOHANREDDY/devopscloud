@@ -3,7 +3,7 @@
   connection: local
   tasks:
   - name: comand test
-    #command: cat /etc/passwd | grep root
+    command: cat /etc/passwd | grep root
     shell: cat /etc/passwd | grep root
     register: users_output
 
@@ -11,5 +11,6 @@
     debug:
       msg: "{{users_output}}"
 
-  #- name: list_files
-  #    command: ls -ltr > /tmp/files.txt
+  - name: list_files
+    #command: ls -ltr > /tmp/files.txt
+    shell: ls -ltr > /tmp/files.txt
