@@ -2,9 +2,13 @@
   hosts: local
   connection: local
   vars:
-    session_count: 7
+    given_number: 7
   tasks:
-  - name: conditions check
+  - name: check give number is even
     debug:
-      msg: "Anisble takes more than 5 sessions"
-    when: session_count > 5
+      msg: "{{given_number}} is even"
+    when: given_number % 2 == 0
+  - name: check given number is odd
+    debug:
+      msg: "{{given_number} is odd}"
+    when: given_number % 2 != 0
