@@ -1,0 +1,12 @@
+- name: loops in ansible
+  hosts: local
+  connection: local
+
+  tasks:
+  - name: display names in loops
+    debug:
+      msg: "Hi {{item}}"  # item is keyword
+    loop:
+    - Ram
+    - Aishu
+    - Advith
