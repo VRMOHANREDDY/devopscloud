@@ -3,11 +3,11 @@
   become: yes
   tasks:
   - name: Install package
-  package:
-    name: "{{item}}"
-    state: present
-  loop:
-  - nginx
-  - mysql
-  - mongodb-mongosh
-  - git
+    package:
+      name: "{{item}}"
+      state: present
+    loop:
+    - nginx
+    - mysql
+    - mongodb-mongosh
+    - git
