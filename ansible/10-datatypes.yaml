@@ -1,6 +1,6 @@
 - name: data types in yaml
   hosts: local
-  connections: local
+  connection: local
   vars:
     course: "Devops" #String
     duration: 100   # number
@@ -16,7 +16,7 @@
   - name: print information
     debug:
       msg:
-        name: {{name}}
+        name: {{course}}
         duration: {{duration}}
         is_it_live: {{is_session_live}}
         topics: {{topics}}
