@@ -1,0 +1,23 @@
+- name: data types in yaml
+  hosts: local
+  connections: local
+  vars:
+    course: "Devops" #String
+    duration: 100   # number
+    is_session_live: true # Bollean
+    topics:  # lists
+    - linux
+    - Terraform
+    - kubernets
+    more_details: # map
+      name: "Ram"
+      location: "USA"
+  tasks:
+  - name: print information
+    debug:
+      msg:
+        name: {{name}}
+        duration: {{duration}}
+        is_it_live: {{is_session_live}}
+        topics: {{topics}}
+        other_details: {{more_details}}
